@@ -11,6 +11,6 @@ public class TomController {
 
     public void tom(){
 
-        System.out.println("I am Tom");
+        System.out.println("I am Tom!!!");
     }
 }
