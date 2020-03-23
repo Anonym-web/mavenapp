@@ -12,5 +12,9 @@ public class TomController {
     public void tom(){
 
         System.out.println("I am Tom!!!");
+
+       Long start = System.currentTimeMillis();
+       Long end = System.currentTimeMillis();
+
     }
 }
