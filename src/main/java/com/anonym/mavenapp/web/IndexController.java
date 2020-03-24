@@ -11,7 +11,7 @@ public class IndexController {
 
     public void test(){
 
-        System.out.println("I am a programmer!!!!");
+       
 
     }
 }
