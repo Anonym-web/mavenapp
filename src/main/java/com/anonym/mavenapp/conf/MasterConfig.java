@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * This is master Datasource
  */
 @Configuration
-@MapperScan(basePackages = "com.lian.springbootapp.mastermapper", sqlSessionTemplateRef  = "masterSqlSessionTemplate")
+@MapperScan(basePackages = "com.anonym.mavenapp.mastermapper", sqlSessionTemplateRef  = "masterSqlSessionTemplate")
 public class MasterConfig {
 
     @Bean(name = "masterDataSource")
@@ -35,7 +35,7 @@ public class MasterConfig {
     public SqlSessionFactory testSqlSessionFactory(@Qualifier("masterDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/lian/springbootapp/mastermapper/*.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/anonym/mavenapp/mastermapper/*.xml"));
         return bean.getObject();
     }
     @Bean(name = "masterTransactionManager")

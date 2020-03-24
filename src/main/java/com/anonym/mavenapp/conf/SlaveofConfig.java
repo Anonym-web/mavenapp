@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * This is slaveof Datasource
  */
 @Configuration
-@MapperScan(basePackages = "com.lian.springbootapp.slaveofmapper", sqlSessionTemplateRef  = "slaveofSqlSessionTemplate")
+@MapperScan(basePackages = "com.anonym.mavenapp.slaveofmapper", sqlSessionTemplateRef  = "slaveofSqlSessionTemplate")
 public class SlaveofConfig {
     @Bean(name = "slaveofDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.slaveof")
@@ -31,7 +31,7 @@ public class SlaveofConfig {
     public SqlSessionFactory testSqlSessionFactory(@Qualifier("slaveofDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/lian/springbootapp/slaveofmapper/*.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/anonym/mavenapp/slaveofmapper/*.xml"));
         return bean.getObject();
     }
     @Bean(name = "slaveofTransactionManager")
