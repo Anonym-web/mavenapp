@@ -17,6 +17,7 @@ import javax.sql.DataSource;
 /**
  * Author:Anonym
  * 2020/3/24
+ * This is master Datasource
  */
 @Configuration
 @MapperScan(basePackages = "com.lian.springbootapp.mastermapper", sqlSessionTemplateRef  = "masterSqlSessionTemplate")
